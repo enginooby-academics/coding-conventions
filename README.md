@@ -73,7 +73,7 @@
 # III - Commenting
 [⬆ To the top](#0)
 ### 1 - Document
-+ **Variable & functions**: above, combine with _**docstring**_
++ **Variable & functions**: above, combine with _**docstring**_ if public
 ```cs
 /// <summary>
 /// This meta tag has been deprecated in M63
