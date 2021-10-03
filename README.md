@@ -73,10 +73,14 @@
 # III - Commenting
 [⬆ To the top](#0)
 ### 1 - Document
-+ **Variable**: same line
-```ts
-public string cookie; // this meta tag has been deprecated in M63
++ **Variable & functions**: above, combine with _**docstring**_
+```cs
+/// <summary>
+/// This meta tag has been deprecated in M63
+/// </summary>
+public string cookie;
 ```
+
 + **Output**
 
 Result of single statement: same line
@@ -89,11 +93,6 @@ const a = 'foo'
 const b = 'bar'
 console.log(a + b)
 // expected output: foobar
-```
-+ **Function/block**: above 
-```ts
-// this does...
-function fooBar(){}
 ```
 + **Ordered procedure**: above each line w/ cardinal numbers	
 ```ts
