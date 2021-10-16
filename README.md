@@ -28,6 +28,9 @@
 * **pwd** password - **param** parameter - **pic** picture - **pos** position
 * **str** string - **src** source
 * **val** value - **var** variable - **vec** vector
+#### Unity-specific
+* **anim** animator
+* **go** game object
 
 <a name="naming"></a>  
 # II - Naming
