@@ -31,6 +31,7 @@
 #### Unity-specific
 * **anim** animator
 * **go** game object
+* **so** scriptable object
 
 <a name="naming"></a>  
 # II - Naming
@@ -58,11 +59,21 @@
 + **Trait** (PHP) ```PascalCase | T prefix```: *TDisplay*
 + **Enum** ```PascalCase | Singular```: *BtnState {Clicked, Focus, Hover, Active, Disabled}*
 + **Event** 
-    - (of current class) ```camelCase | on+{ordinal}+{action}```: *onClick()*, *on1stClick()*
-    - (of other object) ```camelCase | on+{noun}+{ordinal}+{action}```: *onBtnClick*, *onBtn1stClick*
+    - (of current class) ```camelCase | on+{ordinal}+{action}```: *onClicked()*, *on1stClicked()*
+    - (of other object) ```camelCase | on+{noun}+{ordinal}+{action}```: *onBtnClicked()*, *onBtn1stClicked()*
 + **CSS class** ```BEM```: *hero__btn--round* [[Reference](https://sparkbox.com/foundry/bem_by_example)]
 
-### 3 - Git
+### 3 - Unity Specific
++ Coroutine ```Coroutine suffix```: *DisableCoroutine(float delayInSecs)*
++ Interface ```I prefix```: *IAttackable*
++ Non-MonoBehaviour concrete classes (base prefix for coding lookup & file organization, base preferred to be adjective than noun for English grammar): *ReferenceInt, ReferenceBool, ReferenceGameObject* extend *Reference* => *Referencable*
++ Event
++ ScriptableObject
++ Public field ```PascalCase```
++ Function to clone with modifying properties ```With prefix```: *WithSize(float size)*. Usage: ```Cube cube2 = cube1.WithSize(2f);```
++ Function to add value from the current value: ```Add prefix```
+
+### 4 - Git
 + **Repo name** ```kebab-case | All lower``` (avoid lowerscore _ which seems bad for URL)  
 #### Commit message
 + **Initial commit** first commit of the project involving common/familiar setup.
