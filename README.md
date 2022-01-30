@@ -72,9 +72,9 @@
 + Public field ```PascalCase```
 + Function to clone with modifying properties ```With prefix```: *WithSize(float size)*. Usage: ```Cube cube2 = cube1.WithSize(2f);```
 + Function to add value from the current value: ```Add prefix```
-+ Conditional compiling symbol:
++ Conditional compiling symbol: lets consumers know where to get the asset in order to use the dependent script.
     - For Unity package ```SNAKE_CASE```: *INPUT_SYSTEM*
-    - For 3rd-party asset (in the asset store) ```ASSET prefix & SNAKE_CASE```: *ASSET_DOTWEEN*
+    - For 3rd-party asset (in the asset store) ```SNAKE_CASE & ASSET prefix```: *ASSET_DOTWEEN*
 
 ### 4 - Git
 + **Repo name** ```kebab-case | All lower``` (avoid lowerscore _ which seems bad for URL)  
