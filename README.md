@@ -40,19 +40,19 @@
 
 ### 1 - Variable & Constant
 + **Exceptions** (Go - exported) ```PascalCase```
-+ **Element/HTMLElement** ```e prefix```: *eBtn*
-+ **NodeListOf\<Element>** ```es prefix```: *esBtn*
-+ **JQuery\<HTMLElement>** ```$ prefix```: *$btn*
++ **Element/HTMLElement** ```e_```: *eBtn*
++ **NodeListOf\<Element>** ```es_```: *esBtn*
++ **JQuery\<HTMLElement>** ```$_```: *$btn*
 + **Boolean** ```{is/have/can/do}+{noun}+{adj/verb-ed}```: *wasBtnClicked*, *areBtnsGreen*
 + **Private class member** ```_ prefix```: *_id*
 + **Constant** 
     - (primitive type && project/file/class-scoped) ```SNAKE_CASE | All caps```: *BTN_SELECTOR*
     - (reference type || function-scoped) ```camelCase```
-+ **Unit** (interval, dimension) ```in+{unit} suffix```: *delayInSeconds, BTN_WIDTH_IN_METERS*
++ **Unit** (interval, dimension) ```_in+{unit}```: *delayInSeconds, BTN_WIDTH_IN_METERS*
 
 ### 2 - Type & Function
 + **Function** ```camelCase```: *disableBtn()*
-    - (async) ```camelCase | Async suffix``` *fetchUsersAsync()*
+    - (async) ```camelCase | _Async ``` *fetchUsersAsync()*
     - (C#|Unity; C++|Unreal Engine, Go - exported) ```PascalCase```: *DisableBtn()*
 + **Class/struct/record** ```PascalCase```: *CoolBtn*
 + **Interface** ```PascalCase | I prefix```: *IClickable*
@@ -64,17 +64,18 @@
 + **CSS class** ```BEM```: *hero__btn--round* [[Reference](https://sparkbox.com/foundry/bem_by_example)]
 
 ### 3 - Unity Specific
-+ Coroutine ```Coroutine suffix```: *DisableCoroutine(float delayInSecs)*
-+ Interface ```I prefix```: *IAttackable*
++ Coroutine ```_Coroutine```: *DisableCoroutine(float delayInSecs)*
++ Interface ```I_```: *IAttackable*
 + Non-MonoBehaviour concrete classes (base prefix for coding lookup & file organization, base preferred to be adjective than noun for English grammar): *ReferenceInt, ReferenceBool, ReferenceGameObject* extend *Reference* => *Referencable*
 + Event
 + ScriptableObject
 + Public field ```PascalCase```
-+ Function to clone with modifying properties ```With prefix```: *WithSize(float size)*. Usage: ```Cube cube2 = cube1.WithSize(2f);```
-+ Function to add value from the current value: ```Add prefix```
++ Function to clone with modifying properties ```With_```: *WithSize(float size)*. Usage: ```Cube cube2 = cube1.WithSize(2f);```
++ Function to add value from the current value: ```Add_```
 + Conditional compiling symbol: lets consumers know where to get the asset in order to use the dependent script.
     - For Unity package ```SNAKE_CASE```: *INPUT_SYSTEM*
     - For 3rd-party asset (in the asset store) ```SNAKE_CASE & ASSET prefix```: *ASSET_DOTWEEN*
++ Attribute ```_Attribute```: *ButtonAttribute*
 
 ### 4 - Git
 + **Repo name** ```kebab-case | All lower``` (avoid lowerscore _ which seems bad for URL)  
