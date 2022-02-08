@@ -66,6 +66,7 @@
 ### 3 - Unity Specific
 + Coroutine ```_Coroutine```: *DisableCoroutine(float delayInSecs)*
 + Interface ```I_```: *IAttackable*
++ Flag enumeration ```_Flag```: *AxisFlag*
 + Non-MonoBehaviour concrete classes (base prefix for coding lookup & file organization, base preferred to be adjective than noun for English grammar): *ReferenceInt, ReferenceBool, ReferenceGameObject* extend *Reference* => *Referencable*
 + Event
 + ScriptableObject
