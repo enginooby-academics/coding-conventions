@@ -146,8 +146,10 @@ const schema = new Schema<User>({...
 
 <a name="task-comment"></a>  
 ### 2 - Task
+> Use IDE plugin to highlight different task types w/ different colors
 + **TODO** general tasks
 + **FIX**
++ **TIP** newly-discovered tip should be documented in a dedicated place, e.g., here. Remove comment after documenting.
 + **REMOVE** the code is used for reference later and removed when becoming unneccesary.
 + **ADHOC** temporary code needed to be replaced by more elegant solutions.
 + **REFACTOR** general refactoring tasks
