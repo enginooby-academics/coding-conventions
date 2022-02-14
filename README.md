@@ -32,6 +32,9 @@
 * **anim** animator
 * **go** game object
 * **so** scriptable object
+* **bgm** background music
+* **sfx** sound effect
+* **postfx/pfx** post processing
 
 <a name="naming"></a>  
 # II - Naming
@@ -64,29 +67,30 @@
 + **CSS class** ```BEM```: *hero__btn--round* [[Reference](https://sparkbox.com/foundry/bem_by_example)]
 
 ### 3 - Unity Specific
-+ Coroutine ```_Coroutine```: *DisableCoroutine(float delayInSecs)*
-+ Interface ```I_```: *IAttackable*
-+ Flag enumeration ```_Flag```: *AxisFlag*
-+ Non-MonoBehaviour concrete classes (base prefix for coding lookup & file organization, base preferred to be adjective than noun for English grammar): *ReferenceInt, ReferenceBool, ReferenceGameObject* extend *Reference* => *Referencable*
-+ Event
-+ ScriptableObject
-+ Public field ```PascalCase```
-+ Function to clone with modifying properties ```With_```: *WithSize(float size)*. Usage: ```Cube cube2 = cube1.WithSize(2f);```
-+ Function to add value from the current value: ```Add_```
-+ Conditional compiling symbol: lets consumers know where to get the asset in order to use the dependent script.
++ **Coroutine** ```_Coroutine```: *DisableCoroutine(float delayInSecs)*
++ **Interface** ```I_```: *IAttackable*
++ **Flag enumeration** ```_Flag```: *AxisFlag*
++ **Concrete non-MonoBehaviour** classes (base prefix for coding lookup & file organization, base preferred to be adjective than noun for English grammar): *ReferenceInt, ReferenceBool, ReferenceGameObject* extend *Reference* => *Referencable*
++ **Event**
++ **ScriptableObject**
++ **Public field** ```PascalCase```
++ **Conditional compiling symbol/Directive**: lets consumers know where to get the asset in order to use the dependent script.
     - For Unity package ```SNAKE_CASE```: *INPUT_SYSTEM*
     - For 3rd-party asset (in the asset store) ```SNAKE_CASE & ASSET prefix```: *ASSET_DOTWEEN*
-+ Attribute ```_Attribute```: *ButtonAttribute*
++ **Attribute** ```_Attribute```: *ButtonAttribute*
++ Function to clone with modifying properties ```With_```: *WithSize(float size)*. Usage: ```Cube cube2 = cube1.WithSize(2f);```
++ Function to add value from the current value: ```Add_```
 
 ### 4 - Git
 + **Repo name** ```kebab-case | All lower``` (avoid lowerscore _ which seems bad for URL)  
 #### Commit message
+> Related to [task comment](#task-comment), prefixed by the scope of the committed files 
 + **Initial commit** first commit of the project involving common/familiar setup.
-+ **[Exp]** experimenting, trying out a feature. This code can be used for reference later and removed when getting familiar (marked with // REMOVE).
-+ **[Refactor]** refactoring code, removing unnecesary code/comments, reorganinzing code/files, etc.
-+ **[Fix]**
-+ **[Test]**
-+ **[Doc]**
++ **[EXP]** experimenting, trying out a feature. This code can be used for reference later and removed when getting familiar (marked with // REMOVE).
++ **[REFACTOR]** refactoring code, removing unnecesary code/comments, reorganinzing code/files, etc.
++ **[FIX]**
++ **[TEST]**
++ **[DOC]**
 
 <a name="commenting"></a>  
 # III - Commenting
@@ -139,7 +143,8 @@ const schema = new Schema<User>({...
   width: 100%; /* 1 */
 }
 ```
-  
+
+<a name="task-comment"></a>  
 ### 2 - Task
 + **TODO** general tasks
 + **FIX**
