@@ -17,7 +17,7 @@
 ### I - Abbreviations
 [⬆ To the top](#0)
 > Should be **universally accepted**, provide **good result of shortening (>40%)**, used for naming & commenting
-* **addr** address - **app** application
+* **addr** address - **app** application - **atr** attribute
 * **bg** background - **btn** button
 * **char** character - **col** column - **coord** coordinate
 * **db** database - **dest** destination - **dir** directory
